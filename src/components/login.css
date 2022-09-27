@@ -1,0 +1,48 @@
+.background {
+  background-image: url(../assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.loginbody {
+  display: flex;
+  align-items: center;
+}
+.login-form {
+  margin-left: auto;
+  display: block;
+  margin: 2rem 4rem;
+  background: #ebeef1;
+  padding: 1rem 5rem;
+  text-align: center;
+}
+.input-form {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.3rem;
+}
+.login-imgss {
+  width: 100%;
+}
+.btn {
+  margin-top: 1rem;
+  padding: 0.3rem 5rem;
+  background: #a53860;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.linksecs {
+  display: flex;
+  text-align: center;
+  margin: 1rem auto;
+  justify-content: center;
+}
+.linksec {
+  margin-left: 0.5rem;
+}
+.linksec a {
+  text-decoration: none;
+  color: #a53860;
+  font-weight: 600;
+}
