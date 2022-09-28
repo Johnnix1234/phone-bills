@@ -53,7 +53,7 @@ const Navbar = () => {
       firsttext: "Data Vending",
       lasttext:
         "All networks(Mtn, airtel, etisalat and glo) data subscriptions are available at a cheap and affordable price",
-      link: "https://google.com",
+      link: "/vend",
     },
     {
       id: 2,
@@ -61,7 +61,7 @@ const Navbar = () => {
       firsttext: "Deposit Money",
       lasttext:
         "Vend your airtime at acheap rate to stay connected with family and friends",
-      link: "https://google.com",
+      link: "/vend",
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ const Navbar = () => {
       firsttext: "Purchase Product",
       lasttext:
         "Renew your tv subscriptions here irrespective of the decoder you use",
-      link: "https://google.com",
+      link: "/vend",
     },
     {
       id: 4,
@@ -77,7 +77,7 @@ const Navbar = () => {
       firsttext: "Pay Electricity Bills",
       lasttext:
         "No worries about electricity failure or blackouts, pay your electricity bills here",
-      link: "https://google.com",
+      link: "/vend",
     },
   ];
   const help = [
@@ -181,9 +181,7 @@ const Navbar = () => {
                 <h5>{lasttext}</h5>
                 <div className="space"></div>
                 <div className="linx">
-                  <Link to={link} target="_blank">
-                    VEND
-                  </Link>
+                  <Link to={link}>VEND</Link>
                 </div>
               </div>
             );
