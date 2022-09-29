@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutgoingMail } from "react-icons/md";
+import "./vend.css";
 const Vend = () => {
   return (
     <div className="allbody">
@@ -14,17 +15,31 @@ const Vend = () => {
           <h4>Gmail: ibkjohn37@gmail.com</h4>
         </div>
       </div>
-      <h1>Phonebills</h1>
+      <div className="h1logo">
+        <h1>Phonebills</h1>
+      </div>
       <div className="vendbody">
         <div className="leftsidebar">
-          <Link to="/">Dashboard</Link>
-          <Link to="/buyairtime">Buy Airtime</Link>
-          <Link to="/buydata">Buy Data</Link>
-          <Link to="/cabletv">Cabletv</Link>
+          <li>
+            <Link to="/">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/buyairtime">Buy Airtime</Link>
+          </li>
+          <li>
+            <Link to="/buydata">Buy Data</Link>
+          </li>
+          <li>
+            <Link to="/cabletv">Cabletv</Link>
+          </li>
         </div>
         <div className="rightsidebar">
           <h5>Airtime, Data and Cable</h5>
-          <input type="number" placeholder="703*******" />
+          <input
+            type="number"
+            placeholder="e.g 703*******"
+            className="input1"
+          />
           <h5>select network provider</h5>
           <ul>
             <li>Airtime</li>
@@ -46,8 +61,8 @@ const Vend = () => {
               <button>Pay</button>
             </div>
           </div>
-          <h5>Check Phone balance and more</h5>
-          <div className="amount1">
+          <h6>Check Phone balance and more</h6>
+          <div className="amount3">
             <button>MTN</button>
             <button>AIRTEL</button>
             <button>GLO</button>

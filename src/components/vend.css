@@ -1,0 +1,73 @@
+.h1logo {
+  color: #fc7a1e;
+  font-size: 0.9rem;
+}
+.vendbody {
+  width: 68%;
+  display: grid;
+  grid-template-columns: 30% 100%;
+  gap: 12%;
+}
+.leftsidebar {
+  background: #ebeef1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 2rem;
+  height: 100vh;
+  padding-top: 3rem;
+  border-right: 2px solid rgb(100, 85, 85);
+}
+.leftsidebar a {
+  position: relative;
+  left: 30%;
+  transform: translateX(-30%);
+  text-decoration: none;
+  color: rgb(59, 36, 36);
+  font-weight: 500;
+}
+.leftsidebar li {
+  list-style: none;
+}
+.rightsidebar h5 {
+  margin: 0.5rem 0;
+  color: #7a7b7c;
+  font-size: 1.1rem;
+}
+.input1 {
+  width: 100%;
+  padding: 1rem;
+  background: #f4f4f5;
+  border: 0;
+  border-radius: 0.4rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  color: #7a7b7c;
+}
+li:first-child {
+  margin-right: 1rem;
+}
+.amount1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.2rem;
+  margin: 0.6rem 0;
+}
+.amount1 button {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 0;
+  color: #000;
+  font-weight: 900;
+}
+
+/* .amounttt button {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+} */
