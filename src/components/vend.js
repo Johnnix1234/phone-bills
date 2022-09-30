@@ -1,76 +1,68 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutgoingMail } from "react-icons/md";
 import "./vend.css";
+import Buyairtime from "./buyairtime";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Buydata from "./buydata";
+import Cabletv from "./cabletv";
 const Vend = () => {
   return (
-    <div className="allbody">
-      <div className="nav">
-        <div className="phonenum">
-          <FiPhoneCall />
-          <h4>hot-line: +2347035396754</h4>
-        </div>
-        <div className="gmailacct">
-          <MdOutgoingMail />
-          <h4>Gmail: ibkjohn37@gmail.com</h4>
-        </div>
-      </div>
-      <div className="h1logo">
-        <h1>Phonebills</h1>
-      </div>
-      <div className="vendbody">
-        <div className="leftsidebar">
-          <li>
-            <Link to="/">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/buyairtime">Buy Airtime</Link>
-          </li>
-          <li>
-            <Link to="/buydata">Buy Data</Link>
-          </li>
-          <li>
-            <Link to="/cabletv">Cabletv</Link>
-          </li>
-        </div>
-        <div className="rightsidebar">
-          <h5>Airtime, Data and Cable</h5>
-          <input
-            type="number"
-            placeholder="e.g 703*******"
-            className="input1"
-          />
-          <h5>select network provider</h5>
-          <ul>
-            <li>Airtime</li>
-            <li>Data</li>
-          </ul>
-          <div className="amount1">
-            <button>50</button>
-            <button>100</button>
-            <button>200</button>
-            <button>500</button>
-            <button>1000</button>
-            <button>2000</button>
+    <Router>
+      <div className="allbody">
+        <div className="nav">
+          <div className="phonenum">
+            <FiPhoneCall />
+            <h4>hot-line: +2347035396754</h4>
           </div>
-          <div className="amount2">
-            <div className="amountt">
-              <input type="number" placeholder="#50-100000" />
-            </div>
-            <div className="amounttt">
-              <button>Pay</button>
-            </div>
+          <div className="gmailacct">
+            <MdOutgoingMail />
+            <h4>Gmail: ibkjohn37@gmail.com</h4>
           </div>
-          <h6>Check Phone balance and more</h6>
-          <div className="amount3">
-            <button>MTN</button>
-            <button>AIRTEL</button>
-            <button>GLO</button>
-            <button>ETISALAT</button>
+        </div>
+        <div className="h1logo">
+          <h1>Phonebills</h1>
+        </div>
+        <div className="vendbody">
+          <div className="leftsidebar">
+            <li>
+              <NavLink exact to="/">
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/buyairtime">Buy Airtime</NavLink>
+            </li>
+            <li>
+              <NavLink to="/buydata">Buy Data</NavLink>
+            </li>
+            <li>
+              <NavLink to="/cabletv">Cabletv</NavLink>
+            </li>
+          </div>
+          <div className="rightsidebar">
+            <h5>Airtime, Data and Cable</h5>
+            <input
+              type="number"
+              placeholder="e.g 703*******"
+              className="input1"
+            />
+            <h5>select network provider</h5>
+            <Switch>
+              <Route path="/buyairtime">
+                <Buyairtime />
+              </Route>
+              <Route path="/buydata">
+                <Buydata />
+              </Route>
+              <Route path="/cabletv">
+                <Cabletv />
+              </Route>
+            </Switch>
           </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 export default Vend;

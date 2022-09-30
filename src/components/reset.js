@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutgoingMail } from "react-icons/md";
 import "./reset.css";
@@ -21,13 +22,13 @@ const Reset = () => {
           <h2>PhoneBills</h2>
         </div>
         <div className="link">
-          <Link to="/">Home</Link>
-          <Link to="/login" className="login">
-            Login
-          </Link>
-          <Link to="/register">Register</Link>
-          <Link to="/resetpassword">Reset-password</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/resetpassword">Reset-password</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </div>
       </div>
       <div className="background">

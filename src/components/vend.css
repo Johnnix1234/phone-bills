@@ -15,7 +15,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   gap: 2rem;
-  height: 100vh;
+  height: 100%;
   padding-top: 3rem;
   border-right: 2px solid rgb(100, 85, 85);
 }
@@ -31,7 +31,7 @@
   list-style: none;
 }
 .rightsidebar h5 {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   color: #7a7b7c;
   font-size: 1.1rem;
 }
@@ -45,16 +45,19 @@
 ul {
   list-style: none;
   display: flex;
+  gap: 1rem;
+}
+ul a {
+  text-decoration: none;
   color: #7a7b7c;
+  cursor: pointer;
 }
-li:first-child {
-  margin-right: 1rem;
-}
+
 .amount1 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1.2rem;
-  margin: 0.6rem 0;
+  margin: 1rem 0;
 }
 .amount1 button {
   padding: 1rem;
@@ -63,11 +66,57 @@ li:first-child {
   color: #000;
   font-weight: 900;
 }
-
-/* .amounttt button {
+.amount2 {
+  position: relative;
+}
+.amountt input {
+  width: 100%;
   padding: 1rem;
+  background: #f4f4f5;
+  border: 0;
+  border-radius: 0.4rem;
+}
+
+.amounttt {
+  position: absolute;
+  top: 0.2rem;
+  left: 90%;
+}
+.jusinput {
+  width: 100%;
+  padding: 1rem;
+  background: #f4f4f5;
+  border: 0;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.amounttt button {
+  padding: 0.8rem 1.5rem;
   border-radius: 0.4rem;
   border: 0;
   color: #fff;
+  background: #ada8b6;
   font-weight: 700;
-} */
+}
+.rightsidebar h6 {
+  padding: 2rem 0 0.8rem;
+  font-size: 1rem;
+  color: #7a7b7c;
+}
+.amount3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.amount3 button {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 0;
+  color: #000;
+  font-weight: 900;
+}
+a.active {
+  color: #fc7a1e;
+}
