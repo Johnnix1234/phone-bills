@@ -42,11 +42,14 @@ const Vend = () => {
           </div>
           <div className="rightsidebar">
             <h5>Airtime, Data and Cable</h5>
-            <input
-              type="number"
-              placeholder="e.g 703*******"
-              className="input1"
-            />
+            <div className="amountt">
+              <div className="prefixx">+234</div>
+              <input
+                type="number"
+                placeholder="e.g 703*******"
+                className="input1"
+              />
+            </div>
             <h5>select network provider</h5>
             <Switch>
               <Route path="/buyairtime">

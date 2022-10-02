@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 const Buydata = () => {
+  const [togglestate, Settogglestate] = useState(null);
+  const handleClick = (index) => {
+    Settogglestate(index);
+  };
   return (
     <>
       <ul>
@@ -14,16 +19,47 @@ const Buydata = () => {
         </li>
       </ul>
       <div className="amount1">
-        <button>150</button>
-        <button>200</button>
-        <button>400</button>
-        <button>500</button>
-        <button>1000</button>
-        <button>2000</button>
+        <button
+          onClick={() => handleClick(1)}
+          className={togglestate === 1 ? "tabs" : ""}
+        >
+          150
+        </button>
+        <button
+          onClick={() => handleClick(2)}
+          className={togglestate === 2 ? "tabs" : ""}
+        >
+          200
+        </button>
+        <button
+          onClick={() => handleClick(3)}
+          className={togglestate === 3 ? "tabs" : ""}
+        >
+          400
+        </button>
+        <button
+          onClick={() => handleClick(4)}
+          className={togglestate === 4 ? "tabs" : ""}
+        >
+          500
+        </button>
+        <button
+          onClick={() => handleClick(5)}
+          className={togglestate === 5 ? "tabs" : ""}
+        >
+          1000
+        </button>
+        <button
+          onClick={() => handleClick(6)}
+          className={togglestate === 6 ? "tabs" : ""}
+        >
+          2000
+        </button>
       </div>
       <div className="amount2">
         <div className="amountt">
-          <input type="number" placeholder="#50-10000" />
+          <div className="prefix">&#x20A6;</div>
+          <input type="number" placeholder="50-10000" />
         </div>
         <div className="amounttt">
           <button>PAY</button>

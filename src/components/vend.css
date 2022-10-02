@@ -15,7 +15,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   gap: 2rem;
-  height: 100%;
+  height: 100vh;
   padding-top: 3rem;
   border-right: 2px solid rgb(100, 85, 85);
 }
@@ -69,18 +69,34 @@ ul a {
 .amount2 {
   position: relative;
 }
+.amountt {
+  display: flex;
+  align-items: center;
+  background: #f4f4f5;
+  border-radius: 0.4rem;
+}
+.prefix {
+  padding-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.prefixx {
+  padding-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
 .amountt input {
   width: 100%;
   padding: 1rem;
   background: #f4f4f5;
-  border: 0;
-  border-radius: 0.4rem;
+  border: none;
+  outline: none;
 }
 
 .amounttt {
   position: absolute;
   top: 0.2rem;
-  left: 90%;
+  right: 0;
 }
 .jusinput {
   width: 100%;
@@ -119,4 +135,8 @@ ul a {
 }
 a.active {
   color: #fc7a1e;
+}
+
+.tabs {
+  background: #fc7a1e;
 }
