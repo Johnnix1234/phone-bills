@@ -251,9 +251,7 @@ footer p {
   .images {
     grid-template-columns: 1fr;
   }
-  .imagess {
-    grid-template-columns: 1fr;
-  }
+
   .all {
     overflow-x: hidden;
   }
@@ -265,5 +263,8 @@ footer p {
   }
   .lin {
     margin-right: 1rem;
+  }
+  .lastsec {
+    display: none;
   }
 }
