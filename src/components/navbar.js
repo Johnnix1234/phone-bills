@@ -15,8 +15,31 @@ import logo from "../assets/logo.png";
 import vector from "../assets/Vector.png";
 import calendar from "../assets/calendar.png";
 import Rupee from "../assets/Rupee.png";
+import { useState, useEffect } from "react";
+import { BsMenuDown } from "react-icons/bs";
+import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
+  const [mobile, Setmobile] = useState(false);
+  const [reslogo, setReslogo] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      Setmobile(true);
+    }
+  }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        Setmobile(true);
+      } else {
+        Setmobile(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const data = [
     {
       id: 1,
@@ -123,7 +146,37 @@ const Navbar = () => {
         <div className="logo">
           <h2>PhoneBills</h2>
         </div>
-        <div className="link">
+        <div className="lin">
+          {!mobile && (
+            <div className="link">
+              <NavLink exact to="/">
+                Home
+              </NavLink>
+              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/register">Register</NavLink>
+              <NavLink to="/resetpassword">Reset-password</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
+            </div>
+          )}
+          {mobile && (
+            <div className="toggle">
+              {reslogo ? (
+                <GrClose
+                  className="logostyle"
+                  onClick={() => setReslogo(!reslogo)}
+                />
+              ) : (
+                <BsMenuDown
+                  className="logostyle"
+                  onClick={() => setReslogo(!reslogo)}
+                />
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+      <div className={reslogo ? "togglelin" : "toggleli"}>
+        <div className="linkk">
           <NavLink exact to="/">
             Home
           </NavLink>

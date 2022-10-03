@@ -24,23 +24,59 @@
   align-items: center;
   margin: 0.5rem 0;
 }
+.toggle {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.logostyle {
+  font-size: 1.1rem;
+}
 .logo {
   margin-left: 8rem;
   color: #fc7a1e;
 }
-.link {
+.lin {
   margin-left: auto;
   margin-right: 8rem;
+}
+.link {
   font-weight: 700;
   font-style: normal;
   font-size: 15px;
   line-height: 18px;
+}
+.linkk {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 18px;
+  background: #1b1919;
+  width: 30%;
+  position: fixed;
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+.linkk a {
+  text-align: center;
+  margin: 2.9rem 0;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.toggleli {
+  position: absolute;
+  /* left: -100%; */
+  transition: 0.3s all ease-in-out;
+}
+.togglelin {
+  left: 0;
 }
 .link a {
   text-decoration: none;
   margin-left: 20px;
   color: #585758;
 }
+
 a.active {
   color: #fc7a1e;
 }
